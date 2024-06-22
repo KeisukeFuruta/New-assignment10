@@ -48,6 +48,12 @@ public class Main {
     );
 
     // 英数字以外の文字列を抜き出す
+    System.out.println("【英数字以外抽出】");
 
+    System.out.println(randomStrings.stream()
+        .map(s -> s.replaceAll("[a-zA-Z0-9]", ""))
+        .filter(s -> !s.isEmpty())
+        .collect(Collectors.joining(","))
+    );
   }
 }
